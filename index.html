@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Save the Date Maker</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&family=Jost:wght@400;500;600&family=Noto+Serif+Bengali:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,500;1,500&family=Jost:wght@400;500;600&family=Noto+Serif+Bengali:wght@400;600&display=swap">
 
 <!-- Builder chrome. Layout: preview of the card beside (or above on phones) a short form, then download and share steps. -->
 <style id="pageCss">
@@ -65,7 +65,7 @@ details summary{cursor:pointer;font-size:.78rem;font-weight:600;letter-spacing:.
 .cr{
   --bg1:#6a0e20;--bg2:#430912;--hi:#f3dcb0;--lo:#d6a96f;--btn-ink:#430912;--heart:#7a1024;--paper:#efe3cf;
   --goldgrad:linear-gradient(145deg,#f6e0b4 0%,#cd9f66 38%,#ecca94 62%,#b98550 100%);
-  --script:'Pinyon Script','Noto Serif Bengali','Snell Roundhand',cursive;
+  --script:'Playfair Display','Noto Serif Bengali',Georgia,serif;
   --serif:'Cormorant Garamond','Noto Serif Bengali',Georgia,serif;
   background:radial-gradient(120% 80% at 50% 0%,var(--bg1) 0%,var(--bg2) 100%),var(--bg2);
   color:var(--hi);font-family:var(--serif);font-size:18px;line-height:1.45;
@@ -78,8 +78,8 @@ details summary{cursor:pointer;font-size:.78rem;font-weight:600;letter-spacing:.
 .cr [hidden]{display:none!important}
 .cr .screen{width:100%;max-width:420px;margin-inline:auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
 .cr .eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--hi);text-wrap:balance}
-.cr .names{font-family:var(--script);font-weight:400;font-size:clamp(2.6rem,12vw,3.6rem);line-height:1.1;color:var(--hi);text-wrap:balance;margin:0}
-.cr .amp{font-size:.7em;opacity:.8;padding-inline:.18em}
+.cr .names{font-family:var(--script);font-style:italic;font-weight:500;font-size:clamp(1.7rem,7.5vw,2.4rem);line-height:1.15;color:var(--hi);margin:0;display:flex;flex-direction:column;align-items:center;gap:.15em;max-width:100%;overflow-wrap:anywhere;text-wrap:balance}
+.cr .amp{font-size:.75em;opacity:.8}
 .cr .frame{position:relative;width:min(76%,300px);aspect-ratio:3/4.5;border-radius:34px;background:var(--goldgrad);padding:11px;box-shadow:0 18px 40px rgba(0,0,0,.4),inset 0 0 0 2px rgba(255,255,255,.35)}
 .cr .frame::before{content:"";position:absolute;inset:5px;border-radius:30px;border:1.5px solid rgba(90,50,15,.45);pointer-events:none}
 .cr .frame-inner{width:100%;height:100%;border-radius:24px;position:relative;overflow:hidden;background:radial-gradient(90% 70% at 50% 30%,#e8c892,#c99b63 70%,#b78650);box-shadow:inset 0 3px 10px rgba(80,40,10,.45),inset 0 -2px 6px rgba(255,235,200,.4)}
@@ -101,19 +101,19 @@ details summary{cursor:pointer;font-size:.78rem;font-weight:600;letter-spacing:.
 .cr .card-bg{position:absolute;inset:4% 6% 0 6%;background:var(--goldgrad);border-radius:26px;box-shadow:0 16px 36px rgba(0,0,0,.4);padding:9px}
 .cr .card-bg::after{content:"";display:block;width:100%;height:100%;border-radius:19px;background:radial-gradient(90% 70% at 50% 30%,#e8c892,#c99b63 70%,#b78650);box-shadow:inset 0 3px 10px rgba(80,40,10,.4)}
 .cr .collage .strip{position:absolute;right:10%;top:5%;width:34%;transform:rotate(3deg)}
-.cr .std{position:absolute;left:11%;top:12%;width:44%;font-family:var(--script);font-size:clamp(1.7rem,8vw,2.2rem);line-height:1;color:var(--heart);transform:rotate(-10deg);text-align:left}
+.cr .std{position:absolute;left:11%;top:12%;width:44%;font-family:var(--script);font-style:italic;font-weight:500;font-size:clamp(1.25rem,5.6vw,1.6rem);line-height:1.15;color:var(--heart);transform:rotate(-10deg);text-align:left}
 .cr .heart{position:absolute;left:10%;bottom:4%;width:52%;height:auto;filter:drop-shadow(0 6px 8px rgba(0,0,0,.35))}
 .cr .heart-fill{fill:var(--heart)}
 .cr .heart text{font-family:var(--serif);fill:#f3dcb0;letter-spacing:.12em}
 .cr .seal{position:absolute;right:7%;bottom:3%;width:22%;aspect-ratio:1;border-radius:50%;background:var(--goldgrad);display:grid;place-items:center;box-shadow:0 5px 12px rgba(0,0,0,.4)}
-.cr .seal span{width:80%;aspect-ratio:1;border-radius:50%;background:#e9b7a0;color:var(--heart);display:grid;place-items:center;font-family:var(--script);font-size:1.25rem;line-height:1}
+.cr .seal span{width:80%;aspect-ratio:1;border-radius:50%;background:#e9b7a0;color:var(--heart);display:grid;place-items:center;font-family:var(--script);font-style:italic;font-weight:500;font-size:1rem;line-height:1}
 .cr .count-title{font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;color:var(--hi)}
 .cr .count{display:flex;gap:10px;align-items:flex-start;justify-content:center;font-variant-numeric:tabular-nums}
 .cr .count div{display:flex;flex-direction:column;align-items:center;min-width:56px}
 .cr .count b{font-weight:400;font-size:2.3rem;line-height:1;color:var(--hi)}
 .cr .count small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lo);margin-top:4px}
 .cr .count i{font-style:normal;font-size:2rem;line-height:1;color:var(--lo)}
-.cr .follow{font-family:var(--script);font-size:1.9rem;color:var(--hi);margin:0;text-wrap:balance}
+.cr .follow{font-family:var(--script);font-style:italic;font-weight:500;font-size:1.45rem;line-height:1.3;color:var(--hi);margin:0;text-wrap:balance}
 
 /* Entrance sequence for the save-the-date screen. It replays each time the screen is shown. */
 .cr [data-role="std"]:not([hidden]){animation:cr-fade .6s ease both}
@@ -247,7 +247,7 @@ details summary{cursor:pointer;font-size:.78rem;font-weight:600;letter-spacing:.
 <script>
 (function(){
   var card=document.getElementById('card');
-  var FONT_URL='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&family=Noto+Serif+Bengali:wght@400;600&display=swap';
+  var FONT_URL='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,500;1,500&family=Noto+Serif+Bengali:wght@400;600&display=swap';
   function R(n){return card.querySelector('[data-role="'+n+'"]')}
   function $(id){return document.getElementById(id)}
 
@@ -257,132 +257,4 @@ details summary{cursor:pointer;font-size:.78rem;font-weight:600;letter-spacing:.
     function pad(n){return ('0'+n).slice(-2)}
     function tick(){
       var p=String(getDate()).split('-');
-      var t=new Date(+p[0],+p[1]-1,+p[2],0,0,0).getTime();
-      var s=Math.floor(Math.max(0,t-Date.now())/1000);
-      if(isNaN(s)) s=0;
-      q('cd').textContent=Math.floor(s/86400);
-      q('ch').textContent=pad(Math.floor(s%86400/3600));
-      q('cm').textContent=pad(Math.floor(s%3600/60));
-      var el=q('cs'),v=pad(s%60);
-      if(el.textContent!==v){el.textContent=v;el.classList.remove('flip');void el.offsetWidth;el.classList.add('flip')}
-    }
-    q('open').addEventListener('click',function(){q('cover').hidden=true;q('std').hidden=false;tick()});
-    q('replay').addEventListener('click',function(){q('std').hidden=true;q('cover').hidden=false});
-    tick();setInterval(tick,1000);
-  }
-
-  var cfg={theme:'burgundy',photos:[null,null,null]};
-  function fmt(d){var p=String(d).split('-');return p.length===3&&p[0]?p[2]+'.'+p[1]+'.'+p[0]:''}
-  function strip(el,count){
-    el.innerHTML='';
-    for(var i=0;i<count;i++){
-      var s=document.createElement('div');
-      s.className='shot'+(cfg.photos[i]?'':' empty');
-      if(cfg.photos[i]) s.style.backgroundImage='url('+cfg.photos[i]+')';
-      el.appendChild(s);
-    }
-    var t=document.createElement('div');t.className='tag';t.textContent=fmt(cfg.date);el.appendChild(t);
-  }
-  function read(){
-    cfg.head=$('inHead').value.trim();
-    cfg.n1=$('in1').value.trim()||'Name';
-    cfg.n2=$('in2').value.trim()||'Name';
-    cfg.date=$('inDate').value||'2027-06-12';
-    cfg.place=$('inPlace').value.trim();
-    cfg.close=$('inClose').value.trim();
-  }
-  function render(){
-    read();
-    card.setAttribute('data-theme',cfg.theme);
-    R('headline').textContent=cfg.head;
-    R('n1').textContent=cfg.n1;R('n2').textContent=cfg.n2;
-    R('mono').textContent=cfg.n1.charAt(0).toUpperCase()+'&'+cfg.n2.charAt(0).toUpperCase();
-    R('heartDate').textContent=fmt(cfg.date);
-    R('heartPlace').textContent=cfg.place.toUpperCase().slice(0,26);
-    R('closing').textContent=cfg.close;
-    strip(R('stripCover'),3);strip(R('stripMain'),3);
-  }
-  ['inHead','in1','in2','inDate','inPlace','inClose'].forEach(function(id){$(id).addEventListener('input',render)});
-
-  var sws=document.querySelectorAll('#themes .sw');
-  Array.prototype.forEach.call(sws,function(b){
-    b.addEventListener('click',function(){
-      cfg.theme=b.getAttribute('data-theme');
-      Array.prototype.forEach.call(sws,function(x){x.setAttribute('aria-pressed',String(x===b))});
-      render();
-    });
-  });
-
-  /* Photos: square crop, 480px, JPEG. Keeps the file small enough to send by WhatsApp. */
-  function setPhoto(i,url){
-    cfg.photos[i]=url;
-    var th=$('th'+i);
-    if(url){th.src=url;th.hidden=false}else{th.removeAttribute('src');th.hidden=true;$('ph'+i).value=''}
-    $('rm'+i).hidden=!url;
-    render();
-  }
-  [0,1,2].forEach(function(i){
-    $('ph'+i).addEventListener('change',function(e){
-      var f=e.target.files&&e.target.files[0];if(!f)return;
-      var fr=new FileReader();
-      fr.onload=function(){
-        var img=new Image();
-        img.onload=function(){
-          var w=Math.min(img.width,img.height*4/3),h=w*3/4,tw=Math.min(480,w),th=tw*3/4;
-          var c=document.createElement('canvas');c.width=tw;c.height=th;
-          c.getContext('2d').drawImage(img,(img.width-w)/2,(img.height-h)/2,w,h,0,0,tw,th);
-          setPhoto(i,c.toDataURL('image/jpeg',0.82));
-        };
-        img.src=fr.result;
-      };
-      fr.readAsDataURL(f);
-    });
-    $('rm'+i).addEventListener('click',function(){setPhoto(i,null)});
-  });
-
-  /* Build the standalone file from the live card, so the file always matches the preview. */
-  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-  function buildDoc(){
-    read();
-    var c=card.cloneNode(true);
-    c.querySelector('[data-role="cover"]').hidden=false;
-    c.querySelector('[data-role="std"]').hidden=true;
-    var css=$('cardCss').textContent;
-    var run='('+cardRuntime.toString()+')(document.querySelector(".cr"),function(){return '+JSON.stringify(cfg.date)+'});';
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-      +'<title>'+esc(cfg.n1+' & '+cfg.n2+' - Save the Date')+'</title>'
-      +'<link rel="stylesheet" href="'+FONT_URL+'">'
-      +'<style>html,body{margin:0}body{background:#000}'+css+'.cr{border-radius:0;min-height:100vh}</style></head><body>'
-      +c.outerHTML+'<script>'+run+'<\/script></body></html>';
-  }
-  function say(m){$('status').textContent=m}
-  function fileName(){
-    var s=(cfg.n1+'-'+cfg.n2).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-    return (s||'my')+'-save-the-date.html';
-  }
-
-  $('dl').addEventListener('click',function(){
-    var doc=buildDoc();
-    try{
-      var blob=new Blob([doc],{type:'text/html'});
-      var a=document.createElement('a');
-      a.href=URL.createObjectURL(blob);a.download=fileName();
-      document.body.appendChild(a);a.click();a.remove();
-      setTimeout(function(){URL.revokeObjectURL(a.href)},4000);
-      say('Downloaded. Send that file to your guests or upload it to a free host.');
-    }catch(e){say('Could not download here. Use Copy code instead.')}
-  });
-  $('cp').addEventListener('click',function(){
-    var doc=buildDoc(),ta=$('ta');
-    function fallback(){ta.value=doc;ta.hidden=false;ta.focus();ta.select();say('Select all and copy the code, then save it as a file ending in .html.')}
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(doc).then(function(){say('Code copied. Paste it into a text file and save it as card.html.')}).catch(fallback);
-    }else fallback();
-  });
-
-  render();
-  cardRuntime(card,function(){return cfg.date});
-})();
-</script>
-</body>
-</html>
+      var t=new Date(+p[0],+p[1]-1,+p[2],0,0,0).
